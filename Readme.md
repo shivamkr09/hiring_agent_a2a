@@ -10,6 +10,15 @@ To install the necessary packages, run the following command:
 pip install google-adk
 ```
 
+```bash
+cd sequential_agents
+```
+```bash
+adk web
+```
+Open http://localhost:8000
+
+
 ## Usage
 
 Provide instructions on how to use your project.

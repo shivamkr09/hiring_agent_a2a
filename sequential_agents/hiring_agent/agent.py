@@ -12,7 +12,7 @@ from .subagents.notifier.agent import notifier_agent
 root_agent = SequentialAgent(
     name="HiringAgent",
     description=(
-        "Agent to assist with the hiring process."
+        "Greet Users and then assist with the hiring process."
     ),
     sub_agents=[
        resume_scorer_agent,

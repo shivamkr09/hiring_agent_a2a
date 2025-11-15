@@ -4,11 +4,13 @@ from google.adk.agents import Agent
 from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import SseConnectionParams
 from google.adk.agents import SequentialAgent
+import os
 
 from .subagents.resume_scorer.agent import resume_scorer_agent
 from .subagents.linkedin_finder.agent import linkedin_finder_agent
 from .subagents.summarizer.agent import summarizer_agent
 from .subagents.notifier.agent import notifier_agent
+os.environ["GOOGLE_API_KEY"] = "AIzaSyDWx-N-jTjcAz1nxoknBexp1fsnk-qPGcA"
 root_agent = SequentialAgent(
     name="HiringAgent",
     description=(

@@ -3,7 +3,8 @@ from zoneinfo import ZoneInfo
 from google.adk.agents import Agent
 from google.adk.tools.mcp_tool.mcp_toolset import MCPToolset
 from google.adk.tools.mcp_tool.mcp_session_manager import SseConnectionParams
-
+import os
+os.environ["GOOGLE_API_KEY"] = "AIzaSyDWx-N-jTjcAz1nxoknBexp1fsnk-qPGcA"
 
 
 def get_current_time(city: str) -> dict:
@@ -50,7 +51,7 @@ Things you need to consider are if jd requires some years of experience then low
             # 2. Use SseConnectionParams with the server URL from Step 1.
             connection_params=SseConnectionParams(
                 # Ensure this URL matches the one your MCP server is listening on.
-                url='http://localhost:5090/sse'
+                url='https://mcpserver-flight-delay-predictor-xeow.onrender.com/sse'
             ),
             # Optional: Filter which tools from the MCP server are exposed
             # tool_filter=['list_directory', 'read_file']
